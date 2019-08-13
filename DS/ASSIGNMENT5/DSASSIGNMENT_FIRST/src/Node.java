@@ -8,7 +8,7 @@ public class Node {
 	private String value;
 	Node left, right, parent;
 
-	// constructor
+	
 	public Node(String key, String value) {
 		super();
 		this.key = key;
