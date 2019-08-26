@@ -10,23 +10,17 @@
           function initiate(){
                     registration_div_id=document.getElementById("registration_div");
                      login_div_id=document.getElementById("login_div"); 
-                     emp_id = "5889";
                      employee_name_letters = /^([a-z]+[ ]?|[a-z]+)+$/;
-                     
-                     
-
                      vehicle_emp_div_id=document.getElementById("vehicle_div");
                      vehicle_emp_name=document.getElementById("vehicle_emp_name");
                      vehicle_emp_id=document.getElementById("vehicle_emp_id");
                      vehicle_emp_type=document.getElementById("vehicle_type");
                      vehicle_emp_number=document.getElementById("vehicle_number");
-
                      vehicle_duration=document.getElementById("duration_div");
                      daily=document.getElementById("daily");
                      monthly=document.getElementById("monthly");
                      yearly=document.getElementById("yearly");
                      change_currency = document.getElementById("change_currency");
-
                      dailyprice=document.getElementById("dailyprice");
                      monthlyprice=document.getElementById("monthlyprice");
                      yearlyyprice = document.getElementById("yearlyprice");
@@ -198,6 +192,7 @@
                             return false;
                         }
                         else{
+                            var emp_id = 58889;
                             emp_id+=1;
                             var login= confirm("Registration successfully.Continue With Your Login Id="+emp_id);
                             
@@ -252,8 +247,6 @@
                                document.getElementById("radioprice1").value = "Daily(5)";
                                document.getElementById("radioprice2").value = "Monthly(100)";
                                document.getElementById("radioprice3").value= "Yearly(500)";
-
-                              
                               // monthly.value = "Monthly(100)";
                               // yearly.value = "Yearly(500)";
                                return false;
@@ -441,7 +434,6 @@
                     </tr>
             </table>
     </div>
-    
     <!--Add Vehicle form-->
     <div id ="vehicle_div" style="display: none"> 
             <form action="index.html" name = "add_vehicle_form" method="POST" onsubmit="return validateVehicleForm()">
@@ -491,16 +483,11 @@
                                 <td colspan="2"><center><input type="submit" value="Add Vehicle"> </center></td>
                             </tr>
                    </table>
-            </form>
-              
+            </form>   
     </div>
-
     <!--Add Duration -->
-    <div id ="duration_div" style="display:none" > 
-            
+    <div id ="duration_div" style="display:none" >   
                     <table border="0px" align="center" cellspacing="0px" width="60%"  cellpadding="10">
-                           
-    
                             <!--submit button-->
                             <tr>
                                 <td colspan="2"><input type="radio" id="radioprice1" name="radioprice" value="d" ><span id="dailyprice"></span></td>
@@ -516,8 +503,6 @@
                                <td colspan="3" align="center"><input type="button" name="getpass" id="gatpass" value="GETPASS" onclick="getFinalPrice()"></td>
                             </tr>
                    </table>
-         
-              
     </div>
     <!--Login form-->
     <div id ="login_div" style="display: none"> 
@@ -544,8 +529,7 @@
                                 <td colspan="2"><center><input type="submit" value="Login"> </center></td>
                             </tr>
                    </table>
-            </form>
-              
+                </form> 
     </div>
     <!-- Registration form -->
 <div id ="registration_div" style="display: none">   <!--style="display: none"-->
