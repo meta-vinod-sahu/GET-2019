@@ -12,11 +12,8 @@ public class Student {
 	
 	
 	
-	public int getId() {
-		return id;
-	}
-
 	
+
 	public Student(String first_name, String last_name, String father_name,
 			String email_id, String student_class, int age) {
 		
@@ -31,6 +28,16 @@ public class Student {
 	public Student() {
 		// TODO Auto-generated constructor stub
 	}
+	public int getId() {
+		return id;
+	}
+
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	
 
 	public String getFirst_name() {
 		return first_name;

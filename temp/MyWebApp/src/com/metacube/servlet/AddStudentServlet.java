@@ -40,7 +40,7 @@ public class AddStudentServlet extends HttpServlet {
     		   out2.println("data insert Successfully in database");
     	   }
     	   else{
-    		   out2.println("there is some error");
+    		   out2.println("Student Already exist");
     	   }
     	
     	  
