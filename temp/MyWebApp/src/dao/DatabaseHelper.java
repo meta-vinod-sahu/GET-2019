@@ -24,11 +24,14 @@ public class DatabaseHelper {
 	                statement.setString(4,student.getEmail_id());
 	                statement.setString(5,student.getStudent_class());
 	                statement.setInt(6,student.getAge());
-	                ResultSet rs=statement.executeQuery();
-	                int rows=0;
-	                while(rs.next())
+	                int rs=statement.executeUpdate();
+	                
+	                if(rs>0)
 	                {
-	                	rows++;
+	                	return true;
+	                }
+	                else {
+	                	return false;
 	                }
 	               
 	                
@@ -71,7 +74,8 @@ public class DatabaseHelper {
 	                student.setFather_name(result.getString("father_name"));
 	                student.setEmail_id(result.getString("email_id"));
 	                student.setStudent_class(result.getString("class"));
-	               student.setAge(result.getInt("age"));
+	                student.setAge(result.getInt("age"));
+	                student.setId(result.getInt("id"));
 	                
 	                listOfStudent.add(student);
 	            }
@@ -81,4 +85,20 @@ public class DatabaseHelper {
 	        return listOfStudent;
 	    }
 
+	 public static Student getStudent(int id)
+	    {
+	       Student student = new Student();
+	        String query=Query.SEARCH_STUDENT_BY_ID;
+	        try(Connection connection=DatabaseConnection.getConnection();
+	                //Allocate statement object in connection
+	                PreparedStatement statement = connection.prepareStatement(query); )
+	        {
+	            statement.setInt(1,id);
+	            ResultSet result=statement.executeQuery();
+	            student = getStudents(result).get(0);
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	        return student;
+	    }
 }

@@ -25,4 +25,13 @@
     <servlet-name>searchStudent</servlet-name>
     <url-pattern>/searchStudent</url-pattern>
   </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>EditStudentServlet</servlet-name>
+    <servlet-class>com.metacube.servlet.EditStudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditStudentServlet</servlet-name>
+    <url-pattern>/EditStudentServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
