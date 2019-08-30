@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table cellpadding="20" cellspacing=10> 
+                    <tr>
+                        <td ><a href="addstudent.html">AddStudent</a></td>
+                        <td><a href="showStudentServlet" >Show Student</a></td>
+                        <td><a href="searchstudent.html" >Search Student</a></td>
+                    </tr>
+ </table>
+            
+ <div id ="registration_div">
+       <span id="datainsertsuccessfully"></span>
+        <form action="addStudentServlet" name = "registration_form" method="POST" >
+                <table border="0px" align="center" cellspacing="0px" width="30%"  cellpadding="10">
+                        <tr>
+                            <th colspan="2"><h1>Employee Registration</h1></th>
+                            <td><span id="success"></span></td> 
+                        </tr>
+                        <!--Employee Name-->
+                        <tr>
+                            <td width="20%"><label>First Name:</label></td>
+                            <td width="10%"><input type="text" name="first_name" id="first_name" placeholder="Enter First Name" required ></td>
+                           
+                        </tr>
+                        
+                        <tr>
+                            <td width="20%"><label>Last Name:</label></td>
+                            <td width="10%"><input type="text" name="last_name" id="last_name" placeholder="Enter last Name" required ></td>
+                           
+                        </tr>
+                        
+                        <tr>
+                            <td width="20%"><label>Father Name:</label></td>
+                            <td width="10%"><input type="text" name="father_name" id="father_name" placeholder="Enter Father Name" required></td>
+                           
+                        </tr>
+                        
+                        <tr>
+                                <td width="20%"><label>Email-id:</label></td>
+                                <td width="10%"><input type="email" name="email_id" id="email_id" placeholder="Enter Email Address"  required></td>
+                        </tr>
+                        
+                         <tr>
+                                <td width="20%"><label>Class:</label></td>
+                                <td width="10%"><input type="number" name="student_class" id="class" placeholder="Enter Class" required ></td>
+                               
+                        </tr>
+                        
+                         <tr>
+                                <td width="20%"><label>Age1:</label></td>
+                                <td width="10%"><input type="number" name="age" id="age" placeholder="Enter Age" required ></td>
+                               
+                        </tr>
+                        
+                        <!--submit button-->
+                        <tr>
+                            <td colspan="2"><center><input type="submit" value="Send"> </center></td>
+                        </tr>
+               </table>
+        </form>
+          
+    </div>
+</body>
+</html>
