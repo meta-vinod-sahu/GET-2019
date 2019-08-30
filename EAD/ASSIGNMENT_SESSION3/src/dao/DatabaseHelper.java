@@ -48,18 +48,18 @@ public class DatabaseHelper {
 	 }
 
 	public static ArrayList<Student> getAllStudent() {
-		 ArrayList<Student> listOfEmployee=new ArrayList<Student>();
+		 ArrayList<Student> listOfStudent=new ArrayList<Student>();
 	        String query=Query.SHOW_STUDENT;
 	        try(Connection connection=DatabaseConnection.getConnection();
 	                //Allocate statement object in connection
 	                PreparedStatement statement = connection.prepareStatement(query); )
 	        {
 	            ResultSet result=statement.executeQuery();
-	            listOfEmployee=getStudents(result);
+	            listOfStudent=getStudents(result);
 	        } catch (SQLException e) {
 	            e.printStackTrace();
 	        }
-	        return listOfEmployee;
+	        return listOfStudent;
 	    }
 	    
 	 private static ArrayList<Student> getStudents(ResultSet result)

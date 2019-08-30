@@ -23,12 +23,12 @@ public class ShowStudentServlet extends HttpServlet {
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	        ArrayList<Student> listOfStudent = new ArrayList<Student>();
 	        listOfStudent = DatabaseHelper.getAllStudent();
-	        displayEmployee(listOfStudent, response);
+	        displayStudent(listOfStudent, response);
 	    }
 
 	    
 	    
-	    private void displayEmployee(ArrayList<Student> listOfStudent , HttpServletResponse response) throws IOException
+	    private void displayStudent(ArrayList<Student> listOfStudent , HttpServletResponse response) throws IOException
 	    {
 	        response.setContentType("text/html");
 	        PrintWriter out = response.getWriter();

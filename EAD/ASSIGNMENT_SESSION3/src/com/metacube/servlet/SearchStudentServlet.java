@@ -56,12 +56,12 @@ public class SearchStudentServlet extends HttpServlet {
 
 		out.println("<html>");
 		out.println("<head>");
-		out.println("<title>Show Employees</title>");
+		out.println("<title>Show Student</title>");
 		out.println("</head>");
 		out.println("<body>");
-		out.println("<h1 align=\"center\">Employee Details:</h1>");
+		out.println("<h1 align=\"center\">Student Details:</h1>");
 		out.println("<h3 align=\"center\">" + listOfStudent.size()
-				+ " Employees matched</h3>");
+				+ " Student matched</h3>");
 		out.println("<table align=\"center\" cellpadding=\"6\">");
 		out.println("<th>");
 		out.println("<td><b>First Name</b></td>");
