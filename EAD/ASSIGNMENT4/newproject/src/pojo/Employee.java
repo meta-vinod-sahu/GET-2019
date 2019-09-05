@@ -11,11 +11,23 @@ public class Employee {
 	private int id;
 	
 	
-	
-	
 	public Employee() {
 		super();
 	}
+	
+	public Employee(String employee_name, String employee_password,
+			String employee_emailid, String employee_contact,
+			String organization_type, String employee_gender, int id) {
+		super();
+		this.employee_name = employee_name;
+		this.employee_password = employee_password;
+		this.employee_emailid = employee_emailid;
+		this.employee_contact = employee_contact;
+		this.organization_type = organization_type;
+		this.employee_gender = employee_gender;
+		this.id = id;
+	}
+	
 	public Employee(String employee_name, String employee_password, String employee_emailid, String employee_contact,
 			String organization_type, String employee_gender) {
 		super();

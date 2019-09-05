@@ -7,10 +7,11 @@ import java.util.ArrayList;
 import pojo.Employee;
 
 public class Output {
-	public static String passDetails(double[] price){
+	public static String passDetails(double[] price, int employee_id){
 		String s = "<div align='center'>"
 				+"<form method='get' action='PassServlet'>"
 				+"<p>1. Select Plans in (USD)</p>"
+				+"<input type='hidden' name='emp_id' value='"+employee_id+"'>"
 				+"<select name = 'plan'>"
 				+" <option  value= '"+ price[0] +"'/>" + price[0] + " Daily</option>"
 				+ " <option value= '"+ price[1] +"'/>" + price[1] + " Monthly</option>"

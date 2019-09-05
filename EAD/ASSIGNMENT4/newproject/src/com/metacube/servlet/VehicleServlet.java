@@ -51,7 +51,7 @@ public class VehicleServlet extends HttpServlet {
 		String identification = request.getParameter("vehicle_identification");
 		Vehicle v = new Vehicle(name,type,vehicle_number,employee_id,identification);
 		if(DatabaseHelper.addVehicle(v)){
-			out.println(Output.passDetails(DatabaseHelper.getVehiclePrice(type)));
+			out.println(Output.passDetails(DatabaseHelper.getVehiclePrice(type),employee_id));
 			//out.println(Output.passDetails(Helper.getVehiclePrice(type)));
 		}else{
 			RequestDispatcher rd = request.getRequestDispatcher("/VehiclePage.html");

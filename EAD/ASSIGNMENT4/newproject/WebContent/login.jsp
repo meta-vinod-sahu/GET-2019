@@ -106,9 +106,10 @@
                     <tr>
                         <td style="width:900px" > <h1><span style="color:darkturquoise">Meta</span><span style="color:black">-Parking</span></h1></td>
                         <td ><a href="">Home</a></td>
-                        <td><a href="login.jsp" id="signin"   >Sign-in</a></td>
+                       
                         <td><a href="index.jsp"  id="signup" >Sign-up</a></td>
                         <td><a href="vehicle.jsp"  id="vh"  >Vehicle form</a></td>
+                         <td><a href="FriendServlet">Friend</a></td>
                     </tr>
             </table>
     </div>

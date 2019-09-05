@@ -58,7 +58,7 @@ public class EmployeeLogin extends HttpServlet {
 		if(listOfEmployee.size()>0 && listOfEmployee.get(0).getEmployee_emailid().equalsIgnoreCase(employee_email) && listOfEmployee.get(0).getEmployee_password().equals(employee_confirm_password)) {
 			HttpSession session = request.getSession(true);
 			 session.setAttribute("emailid",employee_email);
-			 session.setMaxInactiveInterval(1*30); 
+			 //session.setMaxInactiveInterval(1*30); 
 			  response.sendRedirect("login.jsp?message=<p style='color:green'>you have successfully login</p>"
 		  );
 		  

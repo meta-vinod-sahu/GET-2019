@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 import pojo.Employee;
 import pojo.Vehicle;
@@ -147,6 +148,33 @@ public class DatabaseHelper {
 	public static Employee getEmployee(int id) {
 		
 		return null;
+	}
+
+	public static ArrayList<Employee> getFriend(String email2){
+		ArrayList<Employee> e = new ArrayList<Employee>();
+		 String query=Query.GET_FRIEND_EMPLOYEE;
+		try (Connection connection=DatabaseConnection.getConnection();
+        //Allocate statement object in connection
+          PreparedStatement statement = connection.prepareStatement(query);){
+		
+			 statement.setString(1,email2);
+             statement.setString(2,email2);
+			ResultSet res = statement.executeQuery();
+			while(res.next()){
+				int id = res.getInt("id");
+				String full_name = res.getString("employee_name");
+				String gender = res.getString("employee_gender");
+				String email = res.getString("employee_emailid");
+				String password = res.getString("employee_password");
+				String contact_number = res.getString("employee_contact");
+				String org = res.getString("organization_type");
+				e.add(new Employee(full_name,password,email,contact_number,org,gender,id));
+			}
+		} catch (SQLException exc) {
+			exc.printStackTrace();
+		}
+
+		return e;
 	}
 
 	/*
