@@ -136,8 +136,8 @@
 				<tr>
 					<td width="20%"><label>Employee Name</label></td>
 					<td width="10%"><input type="text" name="employee_login_email"
-						id="employee_login_email" placeholder="Enter Employee Email"
-						onkeypress="return removeError(id)"></td>
+						id="employee_login_email" placeholder="Enter Employee Email" 
+						onkeypress="return removeError(id)" value='vinod.sahu.12360@gmail.com'></td>
 					<td width="30%" style="text-align: left"><span
 						id="login_username_error_message"></span></td>
 				</tr>
@@ -146,7 +146,7 @@
 					<td width="20%"><label>Password</label></td>
 					<td width="10%"><input type="password"
 						name="employee_login_password" id="employee_login_password"
-						placeholder="Enter password" onkeypress="return removeError(id)"></td>
+						placeholder="Enter password"  value='Ashok123'onkeypress="return removeError(id)"></td>
 					<td width="30%" style="text-align: left"><span
 						id="login_password_error_message"></span></td>
 				</tr>

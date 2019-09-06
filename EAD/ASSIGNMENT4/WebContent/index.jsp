@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -369,6 +370,7 @@
                                document.getElementById("radioprice3").value = "Yearly(3500)";
                             }
                }
+              
 
                function changeRate(){
                    change_currency = document.getElementById("change_currency")
@@ -476,6 +478,10 @@
                    
               }
               }
+            
+           	     
+           	     
+              
         </script>
 </head>
 <body style="margin-top: 0px" onload="initiate()" >
@@ -491,6 +497,7 @@
                         <td><a href="#"  id="signup">Sign-up</a></td>
                         <td><a href="vehicle.jsp"  id="vh">Vehicle form</a></td>
                          <td><a href="FriendServlet">Friend</a></td>
+                          <td><a href="LogoutServlet" >logout</a></td>
                     </tr>
             </table>
     </div>
@@ -517,10 +524,6 @@
    
     <!-- Registration form -->
 
- 
-
-
-
  <div id="registration_div"> 
    
         <form action="EmployeeRegistration" name = "registration_form" method="GET" > <!-- onsubmit="return validateSignupForm() -->
@@ -528,12 +531,12 @@
                         <tr>
                             <th colspan="2"><%= request.getParameter("message")==null ? "": request.getParameter("message")%></th>
                          <td>
-                         <%
+                       <%
                        
                          String n =(String)session.getAttribute("emailid");  
 								
 								%>
-								<b> <%= n==null?" ":n %> your session </b> <br>
+								<b> <%= n==null?"null ":n %> your session </b> <br>
                          </td>  
                         </tr>
                         <tr>
@@ -595,9 +598,5 @@
         </form>
           
     </div>
-
-     <div>
-
-     </div>
 </body>
 </html>

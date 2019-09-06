@@ -68,7 +68,7 @@ public class EmployeeRegistration extends HttpServlet {
 			 request.setAttribute("id", id);
 			 RequestDispatcher rd=request.getRequestDispatcher("vehicle.jsp");
 			 rd.include(request, response);
-			 HttpSession session = request.getSession(true);
+			 HttpSession session = request.getSession(false);
 			 session.setAttribute("emailid",employee_emailid);
 			 //out.print("<script>var ii=confirm('Successfully Registered! Your Employee Id is'++); if(ii){window.location.href ='vehicle.jsp'}</script>");
 			 //RequestDispatcher rd = request.getRequestDispatcher("vehicle.jsp");

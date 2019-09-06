@@ -66,10 +66,10 @@ public class Output {
 	public static String printFriend(ArrayList<Employee> emp){
 		String res = "<html>"
 				+"<h3>Friends</h3>"
-				+"<table>"
-				+"<tr><td>Full Name</td><td>Profile</td></tr>";
+				+"<table cellpadding=20 cellspacing=20 >"
+				+"<tr><td>id</td><td>Name</td><td>Email id</td><td>Gender</td><td>Contact nmuber</td><td>organization</td></tr>";
 		for(Employee e:emp){
-			res+= "<tr><td>" + e.getEmployee_name()+ "</td><td><a href='FriendProfileServlet?id="+ e.getId()+"'>Profile</a></td></tr>";
+			res+= "<tr><td>" + e.getId()+ "</td><td>" + e.getEmployee_name()+ "</td><td>" + e.getEmployee_emailid()+ "</td><td>" + e.getEmployee_gender()+ "</td><td>" + e.getEmployee_contact()+ "</td><td>" + e.getOrganization_type()+ "</td></tr>";
 		}
 
 		return res;

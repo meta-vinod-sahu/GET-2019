@@ -41,6 +41,7 @@ public class FriendServlet extends HttpServlet {
 		}
 		else{
 			 String email = (String) session.getAttribute("emailid");
+			
 			ArrayList<Employee> e = new ArrayList<Employee>();
 			e = (ArrayList<Employee>) DatabaseHelper.getFriend(email);
 			out.println(Output.printFriend(e));	

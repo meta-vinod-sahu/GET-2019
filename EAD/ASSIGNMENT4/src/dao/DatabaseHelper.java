@@ -169,7 +169,9 @@ public class DatabaseHelper {
 				String contact_number = res.getString("employee_contact");
 				String org = res.getString("organization_type");
 				e.add(new Employee(full_name,password,email,contact_number,org,gender,id));
+				
 			}
+			return e;
 		} catch (SQLException exc) {
 			exc.printStackTrace();
 		}

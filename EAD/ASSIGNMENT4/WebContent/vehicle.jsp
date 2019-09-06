@@ -16,6 +16,7 @@
                         <td><a href="login.jsp" id="signin"   >Sign-in</a></td>
                         <td><a href="index.jsp"  id="signup">Sign-up</a></td>
                         <td><a href="vehicle.jsp"  id="vh">Vehicle form</a></td>
+                         <td><a href="LogoutServlet">logout</a></td>
                     </tr>
             </table>
     </div>

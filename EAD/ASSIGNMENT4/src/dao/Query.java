@@ -23,7 +23,7 @@ public class Query {
 	public static final String EMP_ID= "select id from add_employee where employee_emailid = ? ";
 	
 	public static final String VEHICLE_PRICE="select daily,monthly,yearly from pass where type= ? ";
-	public static final String GET_FRIEND_EMPLOYEE="select (id,employee_name,employee_password,employee_emailid,employee_contact,organization_type,employee_gender) from employee where organization_type=(select org from employee where employee_emailid=?) AND employee_emailid != ?";
+	public static final String GET_FRIEND_EMPLOYEE="select id,employee_name,employee_password,employee_emailid,employee_contact,organization_type,employee_gender from add_employee where organization_type = (select organization_type from add_employee where employee_emailid=?) AND employee_emailid != ?";
 		
 	
 }
