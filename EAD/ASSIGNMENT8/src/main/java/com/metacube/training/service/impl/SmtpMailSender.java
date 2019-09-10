@@ -24,8 +24,8 @@ import com.metacube.training.service.MailSender;
  *
  */
 public class SmtpMailSender  implements MailSender{
-	final String username = "thepriyapandey@gmail.com";
-	final String password = "this@is#14";
+	final String username = "";
+	final String password = "";
 	private static final Logger log = LoggerFactory.getLogger(SmtpMailSender.class);
 
 
