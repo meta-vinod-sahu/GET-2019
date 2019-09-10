@@ -31,15 +31,18 @@ public class MockMailSender implements MailSender {
 	@Override
 	public void sendMail() {
 		// TODO Auto-generated method stub
-
+		log.info("hello to the other side");
 	}
 
 	@Override
 	public void writeMail() {
 		try {
-
+			log.info("hello oled");
 			// create properties field
 			Properties properties = new Properties();
+			
+			log.info("---------------------------------");
+			log.info("---------------------------------");
 			String host = "IMAP.gmail.com";
 
 			properties.put("mail.pop3.host", host);
@@ -85,5 +88,6 @@ public class MockMailSender implements MailSender {
 		}
 
 	}
+	
 
 }

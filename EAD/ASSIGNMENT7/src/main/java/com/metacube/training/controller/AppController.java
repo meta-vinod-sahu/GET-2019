@@ -17,6 +17,7 @@ import com.metacube.training.service.MailSender;
 public class AppController {
 	
 	@Autowired
+	@Qualifier("mockMailSender")
 	private MailSender mailSender;
 
 
