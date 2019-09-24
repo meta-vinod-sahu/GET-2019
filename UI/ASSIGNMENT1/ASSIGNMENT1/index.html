@@ -9,7 +9,6 @@
 </head>
 
 <body background="se.jpg">
-    <!-- main nav bar -->
     <nav position=fixed>
 
         &nbsp; <a href="#addEmployee">
@@ -27,7 +26,7 @@
     </nav>
     <br>
     <br>
-    <!-- Body backfround inmage -->
+    <!--  backfround inmage -->
     <div align="center">
         <img src="logo-metacube.png" />
     </div>
@@ -44,13 +43,13 @@
                     <td><label>
                             <font size="5px">Full name :</font>
                         </label></td>
-                    <td><input type="text" name="name" placeholder="Name"  /></td>
+                    <td><input type="text" name="name" placeholder="Name"  required/></td>
                 </tr>
                 <tr>
                     <td><label>
                             <font size="5px">Gender :</font>
                         </label></td>
-                    <td><select name="gender">
+                    <td><select name="gender" required>
                             <option selected>---Select One Please---</option>
                             <option>Female</option>
                             <option>Male</option>
@@ -61,7 +60,7 @@
                     <td><label>
                             <font size="5px">Email Id :</font>
                         </label></td>
-                    <td><input type="email" name="mail" placeholder="Email Address"
+                    <td><input type="email" name="mail" placeholder="Email Address" required
                             />
                     </td>
                 </tr>
@@ -69,7 +68,7 @@
                     <td><label>
                             <font size="5px">Password :</font>
                         </label></td>
-                    <td><input type="password" name="pass" placeholder="Password"
+                    <td><input type="password" name="pass" placeholder="Password" required
                            /></td>
                 </tr>
                 <tr>
@@ -86,7 +85,7 @@
                             required /></td>
                 </tr>
             </table>
-            <br> <input type="button" value="Register" />
+            <br> <input type="submit" value="Register" />
         </form>
     </div>
     <br>
@@ -103,13 +102,13 @@
                     <td><label>
                             <font size="5px">Name :</font>
                         </label></td>
-                    <td><input type="text" name="name" placeholder="Vehicle Name" /></td>
+                    <td><input type="text" name="name" placeholder="Vehicle Name" required/></td>
                 </tr>
                 <tr>
                     <td><label>
                             <font size="5px">Vehicle Type :</font>
                         </label></td>
-                    <td><select name="vehType">
+                    <td><select name="vehType" required>
                             <option selected>---Select One Please---</option>
                             <option>Cylce</option>
                             <option>Motorlcyle</option>
@@ -120,7 +119,7 @@
                     <td><label>
                             <font size="5px">Vehicle Number :</font>
                         </label></td>
-                    <td><input type="text" name="vehNum" placeholder="RJ XX XXXX"
+                    <td><input type="text" name="vehNum" placeholder="RJ XX XXXX" required
                             /></td>
                 </tr>
                 <tr>
@@ -130,7 +129,7 @@
                     <td><textarea name="identification" required> </textarea> </td>
                 </tr>
             </table>
-            <br> <input type="button" value="Register" />
+            <br> <input type="submit" value="add vehicle" />
         </form>
     </div>
     <br>
@@ -143,22 +142,22 @@
             <table>
                 <tr>
                     <td><label><font size="5px">Name :</font></label></td>
-                    <td><input type="text" name="name" /></td>
+                    <td><input type="text" name="name" required/></td>
                 </tr>
                 <tr>
                     <td><label><font size="5px">Email :</font></label></td>
-                    <td><input type="email" name="mail" /></td>
+                    <td><input type="email" name="mail" required /></td>
                 </tr>
                 <tr>
                     <td><label><font size="5px">Subject :</font></label></td>
-                    <td><input type="text" name="subject" /></td>
+                    <td><input type="text" name="subject" required/></td>
                 </tr>
                 <tr>
                     <td><label><font size="5px">Message :</font></label></td>
-                    <td><textarea name="msg"></textarea></td>
+                    <td><textarea name="msg" required></textarea></td>
                 </tr>
             </table>
-            <br> <input type="button" value="Send Email" />
+            <br> <input type="submit" value="Send Email" />
         </form>
     </div>
     <br>
@@ -168,8 +167,6 @@
     <div align="center" id="price">
         <div align="center" id="cycle">
             <h1>Cycle</h1>
-            <span><b>$100</b></span> <br>
-            <span><b>/month</b></span> <br><br>
             <span><em>$5 Daily</em></span> <br>
             <span><em>$100 Monthly</em></span> <br>
             <span><em>$500 Yearly</em></span><br><br>
@@ -177,8 +174,6 @@
         </div>
         <div align="center" id="motorcycle">
             <h1>MotorCycle</h1>
-            <span><b>$200</b></span> <br>
-            <span><b>/month</b></span> <br><br>
             <span><em>$10 Daily</em></span> <br>
             <span><em>$200 Monthly</em></span> <br>
             <span><em>$1000 Yearly</em></span><br><br>
@@ -186,8 +181,6 @@
         </div>
         <div align="center" id="fourwheeler">
             <h1>Four Wheelers</h1>
-            <span><b>$500</b></span> <br>
-            <span><b>/month</b></span> <br><br>
             <span><em>$20 Daily</em></span> <br>
             <span><em>$500 Monthly</em></span> <br>
             <span><em>$3500 Yearly</em></span><br><br>
