@@ -5,11 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * 
- * @author Pankaj
- *
- */
+
 @Entity
 @Table(name="student_information")
 public class Student {
