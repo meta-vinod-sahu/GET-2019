@@ -2,11 +2,7 @@ package com.metacube.assignment;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-/**
- * 
- * @author Pankaj
- *
- */
+
 public class ServletInitializer extends SpringBootServletInitializer {
 	/**
 	 * 
