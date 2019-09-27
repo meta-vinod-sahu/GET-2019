@@ -7,11 +7,6 @@ import org.springframework.stereotype.Repository;
 
 import com.metacube.assignment.model.Student;
 
-/**
- * 
- * @author Pankaj
- *
- */
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Long> {
 
