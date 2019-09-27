@@ -11,11 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.metacube.assignment.dto.StudentDTO;
 import com.metacube.assignment.repository.StudentRepository;
 
-/**
- * 
- * @author Pankaj
- *
- */
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class EadSession12AssignmentApplicationTests {
