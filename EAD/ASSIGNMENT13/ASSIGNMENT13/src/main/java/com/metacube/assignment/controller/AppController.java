@@ -17,11 +17,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.metacube.assignment.model.Student;
 import com.metacube.assignment.service.StudentService;
-/**
- * 
- * @author Pankaj
- *
- */
+
 @Controller
 public class AppController {
 	
