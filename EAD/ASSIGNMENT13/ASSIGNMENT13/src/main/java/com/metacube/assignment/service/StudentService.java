@@ -7,11 +7,7 @@ import org.springframework.stereotype.Component;
 import com.metacube.assignment.model.Student;
 import com.metacube.assignment.repository.StudentRepository;
 
-/**
- * 
- * @author Pankaj
- *
- */
+
 @Transactional
 @Component
 public class StudentService {
