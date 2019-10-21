@@ -12,7 +12,7 @@ var mySqlConnection = mysql.createConnection({
     host:'localhost',
     user:'root',
     password:'root',
-    database:'angular_database'
+    database:'angular'
 });
 
 mySqlConnection.connect((err)=>{
@@ -26,8 +26,23 @@ mySqlConnection.connect((err)=>{
 });
 app.listen(3000,()=>console.log("express server is running"));
 
+app.get('/getAllItemCart',(req,res)=>{
+   
+ mySqlConnection.query('SELECT * FROM ITEM',(err,rows)=>{
+     if(!err){
+         res.send(rows);
+         console.log(rows);
+     }
+     else{
+         console.log(err);
+     }
+ })
+});
+
 app.get('/getItemCart',(req,res)=>{
- mySqlConnection.query('SELECT * FROM CART_ITEM',(err,rows)=>{
+    var category = req.query.category;
+    console.log(category);
+ mySqlConnection.query('select * from item where item_id IN (select item_id from category_item where c_id =(select c_id from category where c_name=?)) ',[category],(err,rows)=>{
      if(!err){
          res.send(rows);
          console.log(rows);
