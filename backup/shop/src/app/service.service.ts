@@ -3,19 +3,28 @@ import { Injectable, EventEmitter, Optional } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpParams} from '@angular/common/http';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
 
   $cartItemData = new EventEmitter();
+  $addItem = new EventEmitter();
   subscriber: any;
   data: any;
   allCategory : string;
+ 
   
   
   constructor(private http : HttpClient, private route: ActivatedRoute ) {
     this.allCategory = "allCategory";
+  }
+
+  sendDataToService(cart:any){
+    
+  
+   this.$addItem.emit(cart) ; 
   }
 
   getItem(value){

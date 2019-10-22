@@ -9,3 +9,9 @@
     padding-block-end: 20%
     ;
 }
+#show-item{
+    border: 1px solid black;
+    background-color: aqua;
+    width: auto;
+    height: auto;
+}

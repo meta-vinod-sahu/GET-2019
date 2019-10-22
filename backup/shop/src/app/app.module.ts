@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { CardItemComponent } from 'src/app/card-item/card-item.component';
 
 
-import { RouterModule } from '@angular/router';
-import { from } from 'rxjs';
 import { ServiceService } from './service.service';
+import { CartComponent } from './cart/cart.component';
+import { ShowAddItemToCartComponent } from './show-add-item-to-cart/show-add-item-to-cart.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -16,15 +17,20 @@ import { ServiceService } from './service.service';
  
   declarations: [
     AppComponent,
-    CardItemComponent
-    
+    CardItemComponent,
+    CartComponent,
+    ShowAddItemToCartComponent
+   
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot([]),
     HttpClientModule,
-    RouterModule.forRoot([])
+    
+],
+    
    
-  ],
+  
   providers: [Item,ServiceService],
   bootstrap: [AppComponent,CardItemComponent]
 })

@@ -20,8 +20,13 @@ constructor(private http: HttpClient, private service : ServiceService,  private
 private subscriber: any;
 textString:String;
 
+itemList = [
+ 
+];
+
 ngOnInit()
 	{
+    
    
     this.service.$cartItemData.subscribe((data:any)=>{
      this.data = data;
@@ -38,6 +43,14 @@ ngOnInit()
        });
        
      
-	}
+  }
+  
+  sendDataToList(cart:any){
+    
+  
+
+   this.service.sendDataToService(cart);
+  }
+
 
 }
