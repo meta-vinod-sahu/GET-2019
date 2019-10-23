@@ -1,0 +1,32 @@
+body{
+    background-color:lightsteelblue;
+}
+
+#field{
+  color:white;
+  font-size:xx-large;
+  font-family:Yellowtail;
+  margin:20% auto;
+  width:70%;
+  text-align: center;
+}
+
+input,select,textarea{
+    border:none;
+    outline-color: purple;
+    border-radius: 4px;
+    line-height: 200%;
+    margin-left: 30px;
+    color:palevioletred;
+    font-size:30px;
+    font-family:Yellowtail;
+}
+
+i{
+    color:palevioletred;
+}
+
+@keyframes end{
+    from{color:purple;}
+    to{color:powderblue;}
+}
